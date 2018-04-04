@@ -1,0 +1,11 @@
+.space-test {
+  height: 70vh;
+  width: 20vw;
+  background-color: lightblue;
+}
+
+.pin-test {
+  height: 10vw;
+  width: 10vw;
+  background-color: orange;
+}

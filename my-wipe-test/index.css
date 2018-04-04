@@ -1,0 +1,74 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 60vw;
+}
+
+#home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: peru;
+  transition: opacity 1.2s;
+  z-index: 0;
+}
+
+#current-page-p {
+  position: fixed;
+  top: 0;
+  right: 5vw;
+  color: white;
+  z-index: 100;
+}
+
+#work {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: forestgreen;
+  transform: rotate3d(1,0,0,-180deg);
+  transform-origin: top;
+  transform-style: preserve-3d;
+  transition: transform 1.2s ease-in-out;
+  z-index: 10;
+}
+
+#foop {
+  position: fixed;
+  bottom: 0;
+  left: 45vw;
+}
+
+#contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100vw, 0);
+  height: 100vh;
+  width: 100vw;
+  background-color: rebeccapurple;
+  transition: transform 1.2s ease-in-out;
+  z-index: 10;
+}
+
+#about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  transform-origin: bottom left;
+  height: 100vh;
+  width: 100vw;
+  background-color: teal;
+  transition: transform 1.2s ease-in-out;
+  z-index: 10;
+}
+
+.shift {
+  display: none;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <p id="current-page-p">~~~~ Current Page: <span id="page-indicator"></span> ~~~~</p>
+
+    <div id="home">
+      <button class="home-to-work">Work</button>
+      <button class="home-to-contact">Contact</button>
+      <button class="home-to-resume">Resume</button>
+      <button class="home-to-about">About</button>
+    </div>
+    <div id="work" class="shift">
+      <button class="to-home">Home</button>
+      <button class="through-to-contact">Contact</button>
+      <button class="through-to-resume">Resume</button>
+      <button class="through-to-about">About</button>
+      <p id='foop'>YO</p>
+    </div>
+    <div id="contact" class="shift">
+      <button class="through-to-work">Work</button>
+      <button class="to-home">Home</button>
+      <button class="through-to-resume">Resume</button>
+      <button class="through-to-about">About</button>
+    </div>
+    <div id="resume" class="shift">
+      <button class="through-to-work">Work</button>
+      <button class="through-to-contact">Contact</button>
+      <button class="to-home">Home</button>
+      <button class="through-to-about">About</button>
+    </div>
+    <div id="about" class="shift">
+      <button class="through-to-work">Work</button>
+      <button class="through-to-contact">Contact</button>
+      <button class="through-to-resume">Resume</button>
+      <button class="to-home">Home</button>
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #028;
+}
+
+/* red sunset color */
+/* background: rgba(238, 136, 102, .8); */
+
+.sky {
+  position: relative;
+  height: 600vh;
+  background: linear-gradient(to bottom,
+    #028 50vh, /* dark blue top */
+    #5cf 200vh, /* light blue start */
+    #5cf 300vh, /* light blue stop */
+    #F0A088 350vh, /* sunset red start */
+    rgba(238, 136, 102, .8) 450vh, /* sunset red stop */
+    #028 500vh, /* dark blue start */
+    #028); /*dark blue stop bottom */
+}
+
+.test-bottom-page-scroll-point {
+  position: relative;
+  top: 100vh;
+  height: 50vw;
+  width: 50vw;
+  /* margin-top: 5vh; */
+  background: lightblue;
+}
+
+.test-scroll {
+  /* position: sticky; */
+  /* top: 30vh; */
+  height: 20vw;
+  width: 20vw;
+  background: brown;
+  transition: transform 1s;
+  /* animation: blarb 1s 4s; */
+}
+
+.test-scroll-move {
+  /* position: relative; */
+  transform: translate(20vw, 0);
+}
+
+@keyframes blarb {
+  100% {
+    filter: blur(1vw);
+  }
+}
+
+.space-filler1 {
+  height: 100vh;
+}
+
+.space-filler2 {
+  height: 200vh;
+  width: 10vw;
+  background: green;
+}
+
+.cloud-div {
+  position: fixed;
+  top: 15vh;
+  left: -25vw;
+  height: 10vw;
+  width: 18vw;
+  /* background: rgba(200, 200, 200, .9); */
+  z-index: 130;
+  transition: transform 7s ease-out;
+}
+
+.cloud-float {
+  transform: translate(140vw, 0);
+}
+
+.cloud1 {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  background: rgba(200, 200, 200, .9);
+  border-radius: 45%;
+  box-shadow: 0 0 1.2vw rgba(120, 120, 120, .4);
+}
+
+.cloud2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90%;
+  width: 50%;
+  background: rgba(200, 200, 200, .9);
+  border-radius: 50%;
+  box-shadow: 0 -.2vw 1.2vw -.3vw rgba(238, 156, 102, .9) inset,
+    0 0 1.5vw rgba(100, 100, 100, .2);
+  z-index: 50;
+}
+
+.cloud3a {
+  position: absolute;
+  bottom: 15%;
+  right: 43%;
+  height: 50%;
+  width: 30%;
+  background: rgba(200, 200, 200, .9);
+  border-radius: 50%;
+  box-shadow: -.1vw -.2vw .5vw -.2vw rgba(238, 156, 102, .9) inset,
+    0 0 1.5vw rgba(100, 100, 100, .2);
+  /* z-index: -10; */
+}
+
+/* .cloud3b {
+  position: absolute;
+  bottom: 15%;
+  right: 43%;
+  height: 50%;
+  width: 30%;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: -.1vw -.2vw .5vw -.2vw rgba(238, 156, 102, .9) inset,
+    .1vw .1vw 1.5vw -1vw rgba(100, 100, 100, .2);
+  z-index: 0;
+} */
+
+.cloud4 {
+  position: absolute;
+  bottom: 0;
+  right: 63%;
+  height: 32%;
+  width: 25%;
+  background: rgba(200, 200, 200, .9);
+  border-radius: 50%;
+  box-shadow: -.2vw -.2vw .5vw -.2vw rgba(238, 156, 102, .9) inset,
+    0 0 1.5vw rgba(100, 100, 100, .2);
+  z-index: 50;
+}
+
+.sun {
+  position: sticky;
+  top: 20vh;
+  left: 34vw;
+  height: 30vw;
+  width: 30vw;
+  background-color: #ee6;
+  border-radius: 50%;
+  box-shadow: 0 -5px 50px 5px rgba(250, 110, 20, .8),
+    0 -35px 70px 5px rgba(250, 215, 50, .7),
+    0 35px 80px 10px rgba(250, 215, 50, .8) inset;
+  z-index: 50;
+}
+
+.grass {
+  position: fixed;
+  bottom: -20vh;
+  height: 55vh;
+  width: 100vw;
+  background: #3fa;
+  box-shadow: 0 -.1vw 1vw rgba(0, 85, 17, .5);
+  z-index: 100;
+}
