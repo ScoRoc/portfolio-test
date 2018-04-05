@@ -1,20 +1,36 @@
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  perspective: 60vw;
+  height: 100%;
+  overflow: hidden;
 }
 
-#home {
+body {
+  perspective: 60vw;
+  background: radial-gradient(ellipse at bottom, #1b2736 0%, #090A0F 100%);
+}
+
+.page-btn-container {
+  position: absolute;
+  top: 0;
+}
+
+.page-btn {
+  z-index: 10;
+}
+
+/* #home {
   position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: peru;
+  background: transparent;
   transition: opacity 1.2s;
+  opacity: 1;
   z-index: 0;
-}
+} */
 
 #current-page-p {
   position: fixed;
@@ -24,17 +40,22 @@ body {
   z-index: 100;
 }
 
+.page {
+  margin: 0;
+}
+
 #work {
   position: absolute;
   top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
+  /* left: 0; */
+  /* bottom: 0; */
+  height: 100%;
+  width: 100%;
   background-color: forestgreen;
   transform: rotate3d(1,0,0,-180deg);
   transform-origin: top;
   transform-style: preserve-3d;
-  transition: transform 1.2s ease-in-out;
+  transition: opacity 1.2s, transform 1.2s ease-in-out;
   z-index: 10;
 }
 
@@ -47,25 +68,27 @@ body {
 #contact {
   position: absolute;
   top: 0;
-  left: 0;
+  /* left: 0; */
+  /* bottom: 0; */
   transform: translate(100vw, 0);
   height: 100vh;
   width: 100vw;
   background-color: rebeccapurple;
-  transition: transform 1.2s ease-in-out;
+  transition: opacity 1.2s, transform 1.2s ease-in-out;
   z-index: 10;
 }
 
 #about {
   position: absolute;
   top: 0;
-  left: 0;
+  /* left: 0; */
+  /* bottom: 0; */
   transform: rotate(180deg);
   transform-origin: bottom left;
   height: 100vh;
   width: 100vw;
   background-color: teal;
-  transition: transform 1.2s ease-in-out;
+  transition: opacity 1.2s, transform 1.2s ease-in-out;
   z-index: 10;
 }
 

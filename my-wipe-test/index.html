@@ -3,38 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="stars.css">
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
 
     <p id="current-page-p">~~~~ Current Page: <span id="page-indicator"></span> ~~~~</p>
 
-    <div id="home">
-      <button class="home-to-work">Work</button>
-      <button class="home-to-contact">Contact</button>
-      <button class="home-to-resume">Resume</button>
-      <button class="home-to-about">About</button>
-    </div>
-    <div id="work" class="shift">
+    <!-- Home page -->
+    <!-- <div id="home"> -->
+      <div class="page-btn-container">
+        <button class="page-btn home-to-work">Work</button>
+        <button class="page-btn home-to-contact">Contact</button>
+        <button class="page-btn home-to-resume">Resume</button>
+        <button class="page-btn home-to-about">About</button>
+      </div>
+        <!-- Stars -->
+      <div class="stars-section-container">
+        <div class="stars-wrapper">
+          <div id="star1-container">
+            <div id="star1"></div>
+          </div>
+          <div id="star2-container">
+            <div id="star2"></div>
+            <div id="star2b"></div>
+          </div>
+          <div id="star3-container">
+            <div id="star3"></div>
+            <div id="star3b"></div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+
+    <div id="work" class="page shift">
       <button class="to-home">Home</button>
       <button class="through-to-contact">Contact</button>
       <button class="through-to-resume">Resume</button>
       <button class="through-to-about">About</button>
       <p id='foop'>YO</p>
     </div>
-    <div id="contact" class="shift">
+    <div id="contact" class="page shift">
       <button class="through-to-work">Work</button>
       <button class="to-home">Home</button>
       <button class="through-to-resume">Resume</button>
       <button class="through-to-about">About</button>
+
+      <h1>Wanna work together?</h1>
+
     </div>
-    <div id="resume" class="shift">
+    <div id="resume" class="page shift">
       <button class="through-to-work">Work</button>
       <button class="through-to-contact">Contact</button>
       <button class="to-home">Home</button>
       <button class="through-to-about">About</button>
     </div>
-    <div id="about" class="shift">
+    <div id="about" class="page shift">
       <button class="through-to-work">Work</button>
       <button class="through-to-contact">Contact</button>
       <button class="through-to-resume">Resume</button>
@@ -46,6 +70,7 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+    <script src="stars.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

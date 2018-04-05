@@ -1,5 +1,4 @@
 
-const HOME = $('#home');
 const WORK = $('#work');
 const CONTACT = $('#contact');
 const RESUME = $('#resume');
@@ -12,14 +11,14 @@ let homeToWork = () => {
   currentPage = 'work'; //////// FIX THIS NAME
   pageIndicator.text(currentPage) /////////// REMOVE THIS
   WORK.removeClass('shift');
-  setTimeout(() => { WORK.css('transform', 'rotate3d(1,0,0,0deg)') }, 1);
+  setTimeout(() => { WORK.css('transform', 'rotate3d(1,0,0,0deg)') },20);
 }
 
 let homeToContact = () => {
   currentPage = 'contact'; //////// FIX THIS NAME
   pageIndicator.text(currentPage) /////////// REMOVE THIS
   CONTACT.removeClass('shift');
-  setTimeout(() => { CONTACT.css('transform', 'translate(0,0)') }, 1);
+  setTimeout(() => { CONTACT.css('transform', 'translate(0,0)') },20);
 }
 
 let homeToResume = () => {
@@ -33,24 +32,29 @@ let homeToAbout = () => {
   currentPage = 'about'; //////// FIX THIS NAME
   pageIndicator.text(currentPage) /////////// REMOVE THIS
   ABOUT.removeClass('shift');
-  setTimeout(() => {
-    ABOUT.css('transform', 'rotate(360deg)');
-  }, 1);
-  setTimeout( () => { HOME.css('opacity', '0') }, 1201);
+  setTimeout(() => { ABOUT.css('transform', 'rotate(360deg)') }, 20);
 }
 
 let toHome = () => {
   if (currentPage === 'work') {
     currentPage = 'home';
     pageIndicator.text(currentPage) /////////// REMOVE THIS
-    WORK.css('transform', 'rotate3d(1,0,0,-180deg)');
-    setTimeout( () => { WORK.addClass('shift') }, 1201);
+    WORK.css('opacity', '0');
+    setTimeout( () => {
+      WORK.addClass('shift');
+      WORK.css('transform', 'rotate3d(1,0,0,-180deg)');
+      WORK.css('opacity', '1');
+    }, 1201);
   } else if (currentPage === 'contact') {
     currentPage = 'home';
     pageIndicator.text(currentPage) /////////// REMOVE THIS
-    CONTACT.css('transform', 'translate(100vw, 0)');
-    setTimeout( () => { CONTACT.addClass('shift') }, 1201);
-  } else if (currentPage === 'resume') {
+    CONTACT.css('opacity', '0');
+    setTimeout( () => {
+      CONTACT.addClass('shift');
+      CONTACT.css('transform', 'translate(100vw, 0)');
+      CONTACT.css('opacity', '1');
+    }, 1201);
+  } else if (currentPage === 'resume') { ///////////////
     currentPage = 'home';
     //
     pageIndicator.text(currentPage) /////////// REMOVE THIS
@@ -58,17 +62,12 @@ let toHome = () => {
   } else if (currentPage === 'about') {
     currentPage = 'home';
     pageIndicator.text(currentPage) /////////// REMOVE THIS
-    // ABOUT.css('transform', 'rotate(180deg)');
-    // setTimeout( () => { ABOUT.addClass('shift') }, 1201);
-    HOME.css({
-      'z-index': '20',
-      'opacity': '1'
-    });
+    ABOUT.css('opacity', '0');
     setTimeout( () => {
       ABOUT.addClass('shift');
       ABOUT.css('transform', 'rotate(180deg)');
+      ABOUT.css('opacity', '1');
     }, 1201);
-    setTimeout( () => { HOME.css('z-index', '0') }, 1201);
   }
 }
 
